@@ -1,6 +1,9 @@
 import "./App.css";
+import TestAPI from "./components/TestAPI";
 
 function App() {
+  
+  
   return (
     <main className="container">
       <header>
@@ -8,6 +11,7 @@ function App() {
       </header>
 
       <nav className="navbar">
+        
         <ul>
           <li>
             <a
@@ -58,8 +62,8 @@ function App() {
 
       <section className="text-box">
         <h2 className="block-primary">
-          <span className="block-primary-main">Harmonia</span>
-          <span className="block-primary-sub">Votre framework JavaScript</span>
+          <span className="block-primary-main"><TestAPI /></span>
+          <span className="block-primary-sub">Je teste des trucs</span>
         </h2>
         <a
           href="https://documentation-harmonia.vercel.app/"
