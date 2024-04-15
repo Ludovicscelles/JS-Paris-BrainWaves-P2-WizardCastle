@@ -7,7 +7,7 @@ function Rules() {
         <>
             <h1>Rules</h1>
             <p>You want to learn the rules of Dungeons & Dragons ? Here is everything you need to get started !</p>
-            <p>Here is a rule : {rule}</p>
+            <p>Here is a rule : {rule.results[0].name}</p>
         </>
     )
 }

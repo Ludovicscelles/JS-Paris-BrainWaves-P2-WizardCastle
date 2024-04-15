@@ -7,9 +7,7 @@ import App from "./App";
 import Home from "./pages/Home"
 import Rules from "./pages/Rules"
 
-function fetchRules() {
-  return "Rule 1";
-};
+
 
 const router = createBrowserRouter([
   {
@@ -22,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/rules",
         element: <Rules />,
-        loader: () => fetchRules(),
+        loader: () => fetch("https://www.dnd5eapi.co/api/rules"),
       }
 
     ]
