@@ -2,9 +2,8 @@ import "./assets/reset.css"
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
 
-function App() {
 
-  
+function App() {
   
   return (
     <>
