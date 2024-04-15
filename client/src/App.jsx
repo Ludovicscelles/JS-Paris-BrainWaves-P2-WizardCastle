@@ -1,8 +1,10 @@
 import "./App.css";
+import Appi from "./components/appi";
 
 function App() {
   return (
     <main className="container">
+      <Appi/>
       <header>
         <h1 className="logo">Harmonia</h1>
       </header>
