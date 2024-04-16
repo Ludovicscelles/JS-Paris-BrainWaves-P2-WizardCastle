@@ -1,9 +1,10 @@
 /*GLOBAL CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Artifika&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
+:root {
   /*COLORS*/
   --main-bg-color: #eedddd;
+  --main-text: white;
   --dark-prime: #283d3b;
   --dark-second: #197278;
   --warm-prime: #772e25;
