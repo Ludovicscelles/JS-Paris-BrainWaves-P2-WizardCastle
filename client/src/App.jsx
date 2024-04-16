@@ -1,14 +1,25 @@
-import "./assets/reset.css"
+import "./assets/reset.css";
+
 import "./App.css";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   
   return (
-    <main>
-    <img src="/src/assets/wizard_logo_black.svg" alt=""/>
-    <h1>Welcome to Wizard's Tower, dear adventurer !</h1>
-    <p>We provide all kind of resources to help you play Dungeons & Dragons !</p>
-    </main>
+    <>
+      <header>
+        <img src="/src/assets/wizard_logo_black.svg" alt="" />
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/rules">Rules</Link>
+          <Link to="/classes">Class</Link>
+          <Link to="/bestiary">bestiary</Link>
+        </nav>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
 
