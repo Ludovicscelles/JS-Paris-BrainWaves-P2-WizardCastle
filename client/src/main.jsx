@@ -1,12 +1,13 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import Home from "./pages/Home"
-import Rules from "./pages/Rules"
+import Home from "./pages/Home";
+import Rules from "./pages/Rules";
+import Classes from "./pages/Classes";
+import Bestiary from "./pages/Bestiary";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +20,16 @@ const router = createBrowserRouter([
       {
         path: "/rules",
         element: <Rules />,
-      }
-
-    ]
+      },
+      {
+        path: "/classes",
+        element: <Classes />,
+      },
+      {
+        path: "/bestiary",
+        element: <Bestiary />,
+      },
+    ],
   },
 ]);
 
