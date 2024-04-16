@@ -23,6 +23,14 @@ h1 {
   font-size: 2.5em;
 }
 
+h2 {
+  font-family: var(--title-font);
+  font-size: 2em;
+  color: var(--warm-prime);
+  text-align: center;
+  margin: 1em;
+}
+
 p {
   font-family: var(--body-font);
 }

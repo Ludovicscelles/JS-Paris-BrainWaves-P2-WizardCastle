@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function ListItemRound({ itemName }) {
     return (
-        <button type="button">{itemName}</button>
+        <button type="button" className="ListItemRound">{itemName}</button>
     )
 }
 

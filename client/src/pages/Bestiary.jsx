@@ -1,10 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import ListItemRound from "../components/ListItemRound/ListItemRound";
+import FilterButton from "../components/FilterButton/FilterButton";
+import "./Bestiary.css";
 
 function Bestiary() {
   // states
-  const monsters = useLoaderData()
-
+  const { results } = useLoaderData()
+  const monsterTypes = ["aberration", "beast","celestial", "construct", "dragon", "elemental", "fey", "fiend", "giant", "humanoid", "monstrosity", "ooze", "plant", "undead" ];
   // fonctions
 
 
@@ -20,10 +22,14 @@ function Bestiary() {
       <p>
       In the vast realm of Dungeons & Dragons, where heroes rise and fall in epic quests, there exists a myriad of creatures both wondrous and  terrifying. These beings, known collectively as monsters, inhabit the  deepest dungeons, the darkest forests, and the highest peaks. Some are  born of ancient magic, while others are the twisted creations of dark sorcery.
       </p>
-      <ListItemRound />
       <h2>Filter by monster type</h2>
+      <section className="filter-list">
+      {monsterTypes.map((type) => (<FilterButton key={type.index} filterType={type}/>))}
+      </section>
       <h2>All monsters</h2>
-      {monsters.results.map((monster) => (<ListItemRound key={monster.name} itemName={monster.name}/>))}
+      <section>
+      {results.map((monster) => (<ListItemRound key={monster.name} itemName={monster.name}/>))}
+      </section>
     </>
   );
 }
