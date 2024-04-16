@@ -1,22 +1,16 @@
 import "./assets/reset.css";
-
+import NavBar from "./components/NavBar";
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
+      <NavBar />
       <header>
         <img src="/src/assets/wizard_logo_black.svg" alt="" />
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/rules">Rules</Link>
-          <Link to="/classes">Class</Link>
-          <Link to="/bestiary">bestiary</Link>
-        </nav>
       </header>
       <main>
-        <Outlet />
+        <p>yo</p>
       </main>
     </>
   );

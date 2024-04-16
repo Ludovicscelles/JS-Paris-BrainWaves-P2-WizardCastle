@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  opacity: 0.5;
+  height: 50px;
+  align-items: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  opacity: 1;
+  margin-left: 20px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+}
