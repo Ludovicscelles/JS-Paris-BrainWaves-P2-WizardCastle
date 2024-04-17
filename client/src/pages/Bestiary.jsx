@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ListItemRound from "../components/ListItemRound/ListItemRound";
+import ListItemDetails from "../components/ListItemDetails/ListItemDetails";
 import FilterButton from "../components/FilterButton/FilterButton";
 import "./Bestiary.css";
 
@@ -39,6 +40,7 @@ const [monsterIndex, setMonsterIndex] = useState([])
       <section className="filter-list">
       {monsterTypes.map((type) => (<FilterButton key={type.index} filterType={type}/>))}
       </section>
+      {monsterIndex ? <ListItemDetails itemTitle={monsterInfo.name} itemText={monsterInfo.desc} itemSize={monsterInfo.size} itemType={monsterInfo.type}/>: null}
       <h2>All monsters</h2>
       <section className="list-results">
       {results.map((monster) => (<ListItemRound key={monster.name} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.index}/>))}
