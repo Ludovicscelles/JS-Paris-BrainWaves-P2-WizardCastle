@@ -14,7 +14,7 @@ function Bestiary() {
 
   const [monsterInfo, setMonsterInfo] = useState([])
   const [monsterIndex, setMonsterIndex] = useState(null)
-  const [monsterList, setMonsterList] = useState([results])
+  const [monsterList, setMonsterList] = useState(null)
 
 
     useEffect(() => {
@@ -44,10 +44,13 @@ function Bestiary() {
       
       {monsterIndex ? <ListItemDetails itemTitle={monsterInfo.name} itemText={monsterInfo.desc} itemSize={monsterInfo.size} itemType={monsterInfo.type}/>: null}
       
-      <h2>All monsters</h2>
-      <section className="list-results">
-      {monsterList.map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}
-      </section>
+      {monsterList ?
+        <section><h2>All monsters</h2>
+        <section className="list-results">
+        {monsterList.map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}
+        </section>
+        </section>
+      : null}
       </main>
     </>
   );

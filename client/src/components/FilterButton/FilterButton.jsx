@@ -9,7 +9,7 @@ function FilterButton( { filterType, list, handleList}) {
 
 FilterButton.propTypes = {
     filterType: PropTypes.string.isRequired,
-    list: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleList: PropTypes.func.isRequired,
 }
 
