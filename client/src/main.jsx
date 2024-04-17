@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/bestiary",
         element: <Bestiary />,
-        loader: () => fetch("https://www.dnd5eapi.co/api/monsters"),
+        loader: () => fetch("https://api.open5e.com/v1/monsters/?document__slug=wotc-srd&limit=500"),
       },
     ],
   },
