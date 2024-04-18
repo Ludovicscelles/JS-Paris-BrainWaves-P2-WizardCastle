@@ -1,0 +1,10 @@
+main {
+  background-color: var(--main-bg-color);
+  padding: 20px 10px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

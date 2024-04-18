@@ -1,9 +1,10 @@
 /*GLOBAL CSS*/
 @import url("https://fonts.googleapis.com/css2?family=Artifika&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
+:root {
   /*COLORS*/
   --main-bg-color: #eedddd;
+  --main-text: white;
   --dark-prime: #283d3b;
   --dark-second: #197278;
   --warm-prime: #772e25;
@@ -24,7 +25,16 @@ h4,
 h5,
 h6 {
   font-family: var(--title-font);
+  color: var(--main-text);
   font-size: 2.5em;
+}
+
+h2 {
+  font-family: var(--title-font);
+  font-size: 2em;
+  color: var(--warm-prime);
+  text-align: center;
+  margin: 1em;
 }
 
 p {
@@ -49,4 +59,14 @@ main {
 
 body {
   background-color: var(--dark-prime);
+}
+.intro-text {
+  font-family: var(--title-font);
+  text-align: center;
+}
+
+.list-results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
