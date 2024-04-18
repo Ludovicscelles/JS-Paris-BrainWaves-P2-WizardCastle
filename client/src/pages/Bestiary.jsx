@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+
+import SectionHeader from "../components/SectionHeader/SectionHeader";
 import ListItemRound from "../components/ListItemRound/ListItemRound";
 import ListItemDetails from "../components/ListItemDetails/ListItemDetails";
 import FilterButton from "../components/FilterButton/FilterButton";
+
 import "./Bestiary.css";
 
 
@@ -30,7 +33,7 @@ function Bestiary() {
   
   return (
     <>
-      <h1>Bestiary</h1>
+      <SectionHeader />
       <main>
       <h2>Monsters in D&D</h2>
       <p className="intro-text">

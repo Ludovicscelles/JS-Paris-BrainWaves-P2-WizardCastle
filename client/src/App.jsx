@@ -15,9 +15,7 @@ function App() {
           <Link to="/bestiary">bestiary</Link>
         </nav>
       </header>
-      <main>
         <Outlet />
-      </main>
     </>
   );
 }
