@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 // import styles from "./App.module.css";
+import "./App.module.css";
 
 function App() {
   return (

@@ -1,24 +1,65 @@
-import styles from "./home.module.css";
+import { Link } from "react-router-dom";
+
+import "./home.css";
 
 function Home() {
   return (
     <>
-      <header className={styles.HeaderHome}>
-        <div className={styles.imageCenter}>
-          <img src="/src/assets/Wizard Castle.svg" alt="" />
+      <header className="HeaderHome">
+        <div>
+          <img
+            className="imageCenter"
+            src="/src/assets/Wizard Castle.svg"
+            alt=""
+          />
         </div>
       </header>
-      <main className={styles.mainHome}>
-        <div className={styles.container}>
+      <main className="mainHome">
+        <div id="container1">
+          <img src="" alt="" />
           <h1>Welcome to Wizard’s Castle, dear adventurer</h1>
           <p>
             We provide all kind of resources to help you play Dungeons & Dragons
             !
           </p>
+          <div className="button">
+            <Link to="/rules">
+              <h1 className="h1Button">rules</h1>
+            </Link>
+          </div>
         </div>
-        <div className={styles.container}>
+
+        <header className="MeadleHome">
+          <div className="imageCenter">
+            <h1> </h1>
+          </div>
+        </header>
+        <div id="container2">
           <h1>Have a peek at our precious resources</h1>
           <p>Browse our magic library by themes and topics</p>
+          <ul className="listOption">
+            <li>
+              <Link to="/rules">
+                <div className="navItemRules">
+                  <h1>Rules</h1>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/classes">
+                <div className="navItemClass">
+                  <h1>Class</h1>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/bestiary">
+                <div className="navItemBestiary">
+                  <h1>Bestiary</h1>
+                </div>
+              </Link>
+            </li>
+          </ul>
         </div>
       </main>
     </>
