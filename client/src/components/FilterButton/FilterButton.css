@@ -1,0 +1,19 @@
+.filter-button {
+  margin: 1px;
+  padding: 10px;
+  height: 80px;
+  width: 100px;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  border: none;
+  font-family: var(--title-font);
+  font-size: 0.8em;
+  color: var(--warm-prime);
+}
+
+.filter-button img {
+  height: 50px;
+}
