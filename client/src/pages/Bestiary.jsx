@@ -18,7 +18,7 @@ function Bestiary() {
 
 
     useEffect(() => {
-    fetch(`https://api.open5e.com/v1/monsters/${monsterIndex}`)
+    fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
     .then((res) => res.json())
     .then((data) => setMonsterInfo(data))
     .catch((err) => console.error(err))
@@ -45,7 +45,8 @@ function Bestiary() {
       {monsterIndex ? <ListItemDetails itemTitle={monsterInfo.name} itemText={monsterInfo.desc} itemSize={monsterInfo.size} itemType={monsterInfo.type}/>: null}
       
       <section>
-      {monsterList && monsterList[0].type !== "Monstrosity" ? <h2>All {monsterList[0].type}s </h2> : <h2>All Monstrosities</h2>}
+      {(monsterList !== null && monsterList[0].type !== "Monstrosity" )? <h2>All {monsterList[0].type}s </h2> : null}
+      {(monsterList !== null && monsterList[0].type === "Monstrosity" )? <h2>All Monstrosities</h2> : null}
       {monsterList ?
         <section className="list-results">
         {monsterList.map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}
