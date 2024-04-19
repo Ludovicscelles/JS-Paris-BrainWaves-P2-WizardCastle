@@ -1,35 +1,6 @@
 import "./Footer.css";
-import PropTypes from "prop-types";
+import Info from "./Info";
 
-function Info({ worker }) {
-  return (
-    <div className="info">
-      <h2 className="titleAbout"> {worker.name} </h2>
-      <br />
-      <div className="profil">
-        <a href={worker.linktogithub}>
-          <p>github</p>
-        </a>
-        <br />
-        <a href={worker.linktolinkedin}>
-          <p>linkedin</p>
-        </a>
-        <br />
-        <a href={worker.linktox}>
-          <p>Twitter</p>
-        </a>
-      </div>
-    </div>
-  );
-}
-Info.propTypes = {
-  worker: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    linktogithub: PropTypes.string.isRequired,
-    linktox: PropTypes.string.isRequired,
-    linktolinkedin: PropTypes.string.isRequired,
-  }).isRequired,
-};
 function Footer() {
   const workers = [
     {
@@ -51,7 +22,7 @@ function Footer() {
       linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
     },
     {
-      name: "Ludovic Scelle",
+      name: "Ludovic Scelles",
       linktogithub: "https://github.com/vvdam",
       linktox: "https://twitter.com/vdam_mp4",
       linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
@@ -61,10 +32,9 @@ function Footer() {
     <div className="footer">
       <div className="containerFooter">
         <h1>About</h1>
-        <Info worker={workers[0]} />
-        <Info worker={workers[1]} />
-        <Info worker={workers[2]} />
-        <Info worker={workers[3]} />
+        {workers.map((person) => (
+          <Info key={person.name} worker={person} />
+        ))}
       </div>
     </div>
   );
