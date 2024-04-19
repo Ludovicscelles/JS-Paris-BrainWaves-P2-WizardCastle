@@ -18,8 +18,12 @@
   --base-font-size: 1rem;
 }
 
-h1 {
-  text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--title-font);
   color: var(--main-text);
   font-size: 2.5em;
@@ -37,9 +41,28 @@ p {
   font-family: var(--body-font);
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+
+main {
+  /* margin-top: 2rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
 .intro-text {
   font-family: var(--title-font);
   text-align: center;
+  margin: 0 20px;
 }
 
 .list-results {
