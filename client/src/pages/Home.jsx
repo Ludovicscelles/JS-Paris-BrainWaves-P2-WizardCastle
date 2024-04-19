@@ -18,7 +18,7 @@ function Home() {
         <div id="container1">
           <img src="" alt="" />
           <h1>Welcome to Wizard’s Castle, dear adventurer</h1>
-          <p>
+          <p className="intro-text">
             We provide all kind of resources to help you play Dungeons & Dragons
             !
           </p>
@@ -36,7 +36,9 @@ function Home() {
         </header>
         <div id="container2">
           <h1>Have a peek at our precious resources</h1>
-          <p>Browse our magic library by themes and topics</p>
+          <p className="intro-text">
+            Browse our magic library by themes and topics
+          </p>
           <ul className="listOption">
             <li>
               <Link to="/rules">

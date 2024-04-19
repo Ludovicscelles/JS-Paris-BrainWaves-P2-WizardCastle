@@ -6,7 +6,7 @@
   gap: 7rem;
   color: aliceblue;
   padding: 50px;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   height: auto;
 }
 a {
@@ -23,6 +23,16 @@ a {
 }
 .titleAbout {
   font-size: 24px;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+.profil {
+  margin-left: 10%;
+}
+
+.profil p {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {
@@ -31,17 +41,16 @@ a {
     flex-direction: column;
     text-align: center;
     padding: 30px;
+    gap: 0;
+  }
+  .titleAbout {
+    text-align: center;
   }
 
-  .footer-col:first-child {
+  .profil {
+    margin-left: 0;
+  }
+  /* .footer-col:first-child {
     order: -1;
-  }
-}
-
-.profil {
-  margin-left: 10%;
-}
-
-.profil p {
-  font-weight: bold;
+  } */
 }
