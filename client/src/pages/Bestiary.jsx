@@ -48,8 +48,8 @@ function Bestiary() {
       {monsterIndex ? <ListItemDetails itemTitle={monsterInfo.name} itemText={monsterInfo.desc} itemSize={monsterInfo.size} itemType={monsterInfo.type}/>: null}
       
       <section>
-      {(monsterList !== null && monsterList[0].type !== "Monstrosity" )? <h2>All {monsterList[0].type}s </h2> : null}
-      {(monsterList !== null && monsterList[0].type === "Monstrosity" )? <h2>All Monstrosities</h2> : null}
+      {(monsterList !== null && monsterList[0].type !== "Monstrosity" )? <h2 id="search-result">All {monsterList[0].type}s </h2> : null}
+      {(monsterList !== null && monsterList[0].type === "Monstrosity" )? <h2 id="search-result">All Monstrosities</h2> : null}
       {monsterList ?
         <section className="list-results">
         {monsterList.map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}

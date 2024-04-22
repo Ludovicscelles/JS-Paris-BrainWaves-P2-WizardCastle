@@ -6,9 +6,10 @@ function FilterButton( { filterType, list, handleList, handleDetails }) {
         <button type="button" className="filter-button" onClick={() => {
             handleList(list.filter((element) => (element.type.toLowerCase() === filterType.toLowerCase())))
             handleDetails(null)
-        }}>
+        }}><a href="#search-result">
             <img src={`/src/assets/icons/monsters/${filterType}-icon.svg`} alt=""/>
             {filterType !== "monstrosity" ? `${filterType}s` : "monstrosities"}
+        </a>
         </button>
     )
 }
