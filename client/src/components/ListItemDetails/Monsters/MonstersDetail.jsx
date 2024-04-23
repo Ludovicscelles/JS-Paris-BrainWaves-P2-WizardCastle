@@ -8,6 +8,7 @@ function MonstersDetail({item}) {
             <section className="monster-info">
             {item.desc ? <p className="item-desc">{item.desc}</p> : <p className="item-desc">Our adventurers didn't survive long enough to see this monster...<br/> We're not sure what it looks like, sorry !</p>}
             </section>
+            <h4>Monster stats</h4>
             <section className="stats-block">
                 <section className="diverse-stats">
                     <p>Armor class : {item.armor_class.map(((ac) => (<p key={ac.type}>{ac.type} : {ac.value}</p>)))}</p>
@@ -30,7 +31,7 @@ function MonstersDetail({item}) {
                 <section>
                     <h4>Special Abilities</h4>
                     <ul className="special-attacks">
-                        {item.special_abilities.map((ability) => (<p key={ability.name} >{ability.name} : {ability.desc}</p>))}
+                        {item.special_abilities.map((ability) => (<li key={ability.name} >{ability.name} : {ability.desc}</li>))}
                     </ul>
                 </section>
                  : null

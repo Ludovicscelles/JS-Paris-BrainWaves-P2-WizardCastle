@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import "./FilterList.css"
 
-function FilterList({ setChallengeRating }) {
+function FilterList({ setChallengeRating, challengeRating }) {
 
     return(
-            <select onChange={({target: { value }}) => setChallengeRating(value)}>
+            <select value={challengeRating} onChange={({target: { value }}) => setChallengeRating(value)}>
                 <option>Choose a challenge rating</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -31,6 +32,7 @@ function FilterList({ setChallengeRating }) {
 }
 
 FilterList.propTypes = {
+    challengeRating: PropTypes.string.isRequired,
     setChallengeRating: PropTypes.func.isRequired,
 }
 
