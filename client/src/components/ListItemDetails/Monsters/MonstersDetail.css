@@ -1,0 +1,44 @@
+.monster_detail {
+  background-color: white;
+  padding: 10px;
+}
+
+.monster_detail h4 {
+  font-size: 1.5em;
+  color: var(--warm-prime);
+}
+
+.monster_detail ul {
+  height: auto;
+  margin: 10px;
+}
+
+.monster_detail p {
+  text-align: left;
+}
+
+.item-desc {
+  font-family: var(--title-font);
+  color: var(--warm-prime);
+  text-align: center;
+  padding: 20px;
+}
+
+.monster-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.special-attacks {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}

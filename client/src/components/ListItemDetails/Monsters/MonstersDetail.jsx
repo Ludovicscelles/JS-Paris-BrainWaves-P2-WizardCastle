@@ -1,45 +1,35 @@
 import PropTypes from 'prop-types';
+import "./MonstersDetail.css";
 
 function MonstersDetail({item}) {
     return(
         <section className="monster_detail">
             <img src={`/src/assets/icons/monsters/${item.type.toLowerCase()}-icon.svg`} alt=""/>
             <section className="monster-info">
-            {item.desc ? <p className="item-desc">{item.desc}</p> : <p>Our adventurers didn't survive long enough to see this monster...<br/> We're not sure what it looks like, sorry !</p>}
+            {item.desc ? <p className="item-desc">{item.desc}</p> : <p className="item-desc">Our adventurers didn't survive long enough to see this monster...<br/> We're not sure what it looks like, sorry !</p>}
             </section>
             <section className="stats-block">
-                <p>Armor class : {item.armor_class.map(((ac) => (<p key={ac.type}>{ac.type} : {ac.value}</p>)))}</p>
-                <p>Hit Points : {item.hit_points}</p>
-                <p>XP : {item.xp}</p>
-                <p>Challenge rating : {item.challenge_rating}</p>
-                <p>Proficiency Bonus : {item.proficiency_bonus}</p>
-                <p>Hit Dice : {item.charisma}</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Strength</td>
-                            <td>Dexterity</td>
-                            <td>Constitution</td>
-                            <td>Intelligence</td>
-                            <td>Wisdom</td>
-                            <td>Charisma</td>
-                        </tr>
-                        <tr>
-                            <td>{item.strength}</td>
-                            <td>{item.dexterity}</td>
-                            <td>{item.constitution}</td>
-                            <td>{item.intelligence}</td>
-                            <td>{item.wisdom}</td>
-                            <td>{item.charisma}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section className="diverse-stats">
+                    <p>Armor class : {item.armor_class.map(((ac) => (<p key={ac.type}>{ac.type} : {ac.value}</p>)))}</p>
+                    <p>Hit Points : {item.hit_points}</p>
+                    <p>XP : {item.xp}</p>
+                    <p>Challenge rating : {item.challenge_rating}</p>
+                    <p>Proficiency Bonus : {item.proficiency_bonus}</p>
+                    <p>Hit Dice : {item.charisma}</p>
+                </section>
+                <section className="prime-stats">
+                    <p>Strength : {item.strength}</p>
+                    <p>Dexterity : {item.dexterity}</p>
+                    <p>Constitution : {item.constitution}</p>
+                    <p>Intelligence : {item.intelligence}</p>
+                    <p>Wisdom : {item.wisdom}</p>
+                    <p>Charisma : {item.charisma}</p>
+                </section>
             </section>
-            
                 {item.special_abilities.length !== 0 ?
-                <section className="special-attacks">
+                <section>
                     <h4>Special Abilities</h4>
-                    <ul>
+                    <ul className="special-attacks">
                         {item.special_abilities.map((ability) => (<p key={ability.name} >{ability.name} : {ability.desc}</p>))}
                     </ul>
                 </section>
