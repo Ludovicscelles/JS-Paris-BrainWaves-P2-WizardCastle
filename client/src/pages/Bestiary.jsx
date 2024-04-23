@@ -51,7 +51,7 @@ function Bestiary() {
         </section>
         
         {/* Je trie mes monstres en fonction de leur type */}
-        {monsterIndex ? <ListItemDetails itemTitle={monsterInfo.name} itemText={monsterInfo.desc} itemSize={monsterInfo.size} itemType={monsterInfo.type}/>: null}
+        {monsterIndex ? <ListItemDetails item={monsterInfo}/>: null}
         
         {/* J'appelle la liste de mes résultats */}
         <section>
