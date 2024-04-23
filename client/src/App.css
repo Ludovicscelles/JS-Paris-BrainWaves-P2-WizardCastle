@@ -50,10 +50,12 @@ header {
 }
 
 main {
-  /* margin-top: 2rem; */
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-items: center;
+  min-width: 350px;
+  margin: 0 12.5vw;
 }
 
 body {
@@ -69,4 +71,15 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    min-width: 320px;
+    margin: 0;
+  }
 }

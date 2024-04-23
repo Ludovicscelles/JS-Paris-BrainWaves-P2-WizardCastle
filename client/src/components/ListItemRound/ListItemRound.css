@@ -6,3 +6,8 @@
   background-color: var(--warm-second);
   color: var(--main-text);
 }
+
+.ListItemRound a {
+  color: var(--main-text);
+  text-decoration: none;
+}

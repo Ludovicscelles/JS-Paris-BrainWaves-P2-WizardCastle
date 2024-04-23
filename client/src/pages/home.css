@@ -63,7 +63,8 @@
   margin-right: 6%;
   filter: drop-shadow(rgb(0, 52, 115) 1px 0 10px);
 }
-ul {
+
+.listOption {
   height: 400px;
 }
 

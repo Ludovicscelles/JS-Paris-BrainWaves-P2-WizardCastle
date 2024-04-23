@@ -7,7 +7,7 @@ nav {
   position: sticky;
   align-items: center;
 }
-ul {
+nav ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -16,12 +16,12 @@ ul {
   align-items: center;
   height: 50px;
 }
-li {
+nav li {
   display: flex;
   height: 50px;
   align-items: center;
 }
-li a {
+nav li a {
   color: white;
   text-decoration: none;
   opacity: 1;
@@ -30,6 +30,6 @@ li a {
   align-items: center;
 }
 
-li:hover {
+nav li:hover {
   background-color: rgb(110, 110, 110);
 }
