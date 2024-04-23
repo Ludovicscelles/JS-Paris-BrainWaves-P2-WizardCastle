@@ -3,7 +3,7 @@ import "./MonstersDetail.css";
 
 function MonstersDetail({item}) {
     return(
-        <section className="monster_detail">
+        <section className="monster-detail">
             <img src={`/src/assets/icons/monsters/${item.type.toLowerCase()}-icon.svg`} alt=""/>
             <section className="monster-info">
             {item.desc ? <p className="item-desc">{item.desc}</p> : <p className="item-desc">Our adventurers didn't survive long enough to see this monster...<br/> We're not sure what it looks like, sorry !</p>}
@@ -62,7 +62,7 @@ MonstersDetail.propTypes = {
         charisma: PropTypes.number.isRequired,
         special_abilities: PropTypes.arrayOf(PropTypes.shape({
             name: PropTypes.string.isRequired,
-            desc: PropTypes.string.isRequired
+            desc: PropTypes.string.isRequired,
         }))
     }).isRequired
 }

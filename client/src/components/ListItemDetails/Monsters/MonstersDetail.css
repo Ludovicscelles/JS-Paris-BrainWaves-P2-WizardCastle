@@ -1,9 +1,9 @@
-.monster_detail {
+.monster-detail {
   background-color: white;
   padding: 10px;
 }
 
-.monster_detail h4 {
+.monster-detail h4 {
   font-size: 1.5em;
   color: var(--warm-prime);
   margin: 10px 0;
