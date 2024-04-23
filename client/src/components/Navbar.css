@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  opacity: 0.5;
+  height: 50px;
+  position: sticky;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  opacity: 1;
+  margin-left: 20px;
+  align-items: center;
+  height: 50px;
+}
+nav li {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+}
+.navItem {
+  align-items: center;
+}
+
+nav li:hover {
+  background-color: rgb(110, 110, 110);
+}
