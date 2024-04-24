@@ -1,0 +1,24 @@
+.global-search-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.342);
+  justify-content: flex-end;
+  align-items: center;
+  background-color: none;
+  color: white;
+  border: 1px solid rgb(156, 156, 156);
+  padding: 5px;
+  gap: 5px;
+}
+
+.global-search {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.342);
+  font-family: var(--title-font);
+  text-align: end;
+  border: none;
+  width: 80%;
+}
+
+.global-search:focus {
+  outline: none;
+}

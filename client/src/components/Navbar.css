@@ -6,13 +6,15 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
   align-items: center;
+  gap: 50px;
 }
 nav ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  opacity: 1;
   margin-left: 20px;
   align-items: center;
   height: 50px;
@@ -25,7 +27,6 @@ nav li {
 nav li a {
   color: white;
   text-decoration: none;
-  opacity: 1;
 }
 .navItem {
   align-items: center;
