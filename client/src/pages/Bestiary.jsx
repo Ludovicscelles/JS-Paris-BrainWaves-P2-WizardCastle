@@ -52,8 +52,8 @@ function Bestiary() {
             See all monsters
         </button>
         <section className="filter-options">
-          <section className="filter-list">
-          <h2>Choose a challenge rating</h2>
+          <section className="list-results">
+          <h2>Choose a challenge rating </h2>
             <FilterList setChallengeRating={setChallengeRating} challengeRating={challengeRating}/>
           </section>
           <section>
@@ -64,7 +64,7 @@ function Bestiary() {
             </section>
           </section>        
           {/* Je trie mes monstres en fonction de leur type */}
-          <section className="filter-list">
+          <section className="list-results">
             {monsterIndex ? <ListItemDetails item={monsterInfo}/>: null}
           </section>           
         </section>

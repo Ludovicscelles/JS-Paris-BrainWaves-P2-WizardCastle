@@ -6,7 +6,7 @@ import range from '../../utils/range'
 function FilterList({ setChallengeRating, challengeRating }) {    
     return(
             <select value={challengeRating} onChange={({target: { value }}) => setChallengeRating(value)}>
-                <option>Choose a challenge rating</option>
+                <option>🔻Select challenge rating 🔻</option>
                     {range(1, 20).map((num) => <option key={num} value={num.toString()}>{num.toString()}</option>)}
             </select>
 
