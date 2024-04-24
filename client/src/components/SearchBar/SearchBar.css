@@ -21,6 +21,7 @@
   font-family: var(--title-font);
   background-color: var(--main-bg-color);
   border: none;
+  max-width: 100%;
   padding: 10px 10px;
 }
 
@@ -30,4 +31,5 @@
 
 .search-icon {
   color: var(--dark-prime);
+  width: 100;
 }
