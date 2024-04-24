@@ -22,7 +22,6 @@ function Bestiary() {
   const [monsterList, setMonsterList] = useState(results)
 
   // fonctions
-
     useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
     .then((res) => res.json())
@@ -30,9 +29,11 @@ function Bestiary() {
     .catch((err) => console.error(err))
   }, [monsterIndex])
 
-  // appel du composant
+   // tests
 
-  // tests
+
+
+  // appel du composant
 
   return (
     <>
