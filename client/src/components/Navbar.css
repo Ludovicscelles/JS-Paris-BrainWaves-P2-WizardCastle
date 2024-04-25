@@ -2,7 +2,7 @@ nav {
   display: flex;
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 50px;
+  height: 8vh;
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,6 +10,7 @@ nav {
   padding: 0 20px 0 0;
   align-items: center;
   gap: 50px;
+  z-index: 20;
 }
 nav ul {
   display: flex;
@@ -27,7 +28,10 @@ nav li {
 nav li a {
   color: white;
   text-decoration: none;
+  font-family: var(--title-font);
+  font-size: 1.5em;
 }
+
 .navItem {
   align-items: center;
 }
