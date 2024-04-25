@@ -1,3 +1,10 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 #container1 {
   display: flex;
   flex-direction: column;
@@ -73,6 +80,7 @@
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -192,5 +200,4 @@
 
 .mainHome {
   background-color: var(--dark-prime);
-  /* gap: 4rem; */
 }
