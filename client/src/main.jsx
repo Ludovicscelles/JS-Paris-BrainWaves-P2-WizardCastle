@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ScrollProvider } from "./context/noScroll";
 
 import App from "./App";
 import Home from "./pages/Home";
 import Rules from "./pages/Rules";
 import Classes from "./pages/Classes";
 import Bestiary from "./pages/Bestiary";
+
 
 
 
@@ -39,6 +41,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ScrollProvider>
+      <RouterProvider router={router} />
+    </ScrollProvider>
   </React.StrictMode>
 );

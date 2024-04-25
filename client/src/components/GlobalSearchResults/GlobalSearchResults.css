@@ -10,3 +10,10 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.global-search-no-result {
+  color: white;
+  font-family: var(--title-font);
+  text-align: center;
+  margin: 2em 0 0 0;
+}
