@@ -9,26 +9,61 @@ import FilterList from "../components/FilterList/FilterList";
 
 import "./Bestiary.css";
 
-
 function Bestiary() {
   // states
-  const { results } = useLoaderData()
-  const monsterTypes = ["aberration", "beast","celestial", "construct", "dragon", "elemental", "fey", "fiend", "giant", "humanoid", "monstrosity", "ooze", "plant", "undead" ];
-  const allChallengeRating = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+  const { results } = useLoaderData();
+  const monsterTypes = [
+    "aberration",
+    "beast",
+    "celestial",
+    "construct",
+    "dragon",
+    "elemental",
+    "fey",
+    "fiend",
+    "giant",
+    "humanoid",
+    "monstrosity",
+    "ooze",
+    "plant",
+    "undead",
+  ];
+  const allChallengeRating = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+  ];
 
-  const [challengeRating, setChallengeRating] = useState(allChallengeRating)
-  const [monsterInfo, setMonsterInfo] = useState([])
-  const [monsterIndex, setMonsterIndex] = useState(null)
-  const [monsterList, setMonsterList] = useState(results)
+  const [challengeRating, setChallengeRating] = useState(allChallengeRating);
+  const [monsterInfo, setMonsterInfo] = useState([]);
+  const [monsterIndex, setMonsterIndex] = useState(null);
+  const [monsterList, setMonsterList] = useState(results);
 
   // fonctions
 
-    useEffect(() => {
+  useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
-    .then((res) => res.json())
-    .then((data) => setMonsterInfo(data))
-    .catch((err) => console.error(err))
-  }, [monsterIndex])
+      .then((res) => res.json())
+      .then((data) => setMonsterInfo(data))
+      .catch((err) => console.error(err));
+  }, [monsterIndex]);
 
   // appel du composant
 
@@ -39,50 +74,81 @@ function Bestiary() {
       <SectionHeader />
       <main>
         <h2>Monsters in D&D</h2>
-        <p className="intro-text">In the vast realm of Dungeons & Dragons, where heroes rise and fall in epic quests, there exists a myriad of creatures both wondrous and  terrifying. These beings, known collectively as monsters, inhabit the deepest dungeons, the darkest forests, and the highest peaks. Some are  born of ancient magic, while others are the twisted creations of dark sorcery.</p>
-        <button 
+        <p className="intro-text">
+          In the vast realm of Dungeons & Dragons, where heroes rise and fall in
+          epic quests, there exists a myriad of creatures both wondrous and
+          terrifying. These beings, known collectively as monsters, inhabit the
+          deepest dungeons, the darkest forests, and the highest peaks. Some are
+          born of ancient magic, while others are the twisted creations of dark
+          sorcery.
+        </p>
+        <button
           type="button"
           onClick={() => {
-            setMonsterList(results)
-            setChallengeRating(allChallengeRating)
-            setMonsterIndex(null)
-            }
-          }>
-            See all monsters
+            setMonsterList(results);
+            setChallengeRating(allChallengeRating);
+            setMonsterIndex(null);
+          }}
+        >
+          See all monsters
         </button>
         <section className="filter-options">
           <section className="filter-list">
-          <h2>Choose a challenge rating</h2>
-            <FilterList setChallengeRating={setChallengeRating} challengeRating={challengeRating}/>
+            <h2>Choose a challenge rating</h2>
+            <FilterList
+              setChallengeRating={setChallengeRating}
+              challengeRating={challengeRating}
+            />
           </section>
           <section>
             <h2>Filter by monster type</h2>
             {/* J'appelle ma liste de types */}
             <section className="filter-list">
-              {monsterTypes.map((type) => (<FilterButton key={type.index} filterType={type} list={results} handleList={setMonsterList} handleDetails={setMonsterIndex}/>))}
+              {monsterTypes.map((type) => (
+                <FilterButton
+                  key={type.index}
+                  filterType={type}
+                  list={results}
+                  handleList={setMonsterList}
+                  handleDetails={setMonsterIndex}
+                />
+              ))}
             </section>
-          </section>        
+          </section>
           {/* Je trie mes monstres en fonction de leur type */}
           <section className="filter-list">
-            {monsterIndex ? <ListItemDetails item={monsterInfo}/>: null}
-          </section>           
+            {monsterIndex ? <ListItemDetails item={monsterInfo} /> : null}
+          </section>
         </section>
 
         <section className="filter-results">
           {/* J'appelle la liste de mes résultats */}
-          {(monsterList === results )? <h2 id="search-result">All Monsters </h2> : null}
-          {(monsterList !== results && monsterList[0].type !== "Monstrosity" )? <h2 id="search-result">All {monsterList[0].type}s </h2> : null}
-          {(monsterList !== results && monsterList[0].type === "Monstrosity" )? <h2 id="search-result">All Monstrosities</h2> : null}
-          {monsterList ?
+          {monsterList === results ? (
+            <h2 id="search-result">All Monsters </h2>
+          ) : null}
+          {monsterList !== results && monsterList[0].type !== "Monstrosity" ? (
+            <h2 id="search-result">All {monsterList[0].type}s </h2>
+          ) : null}
+          {monsterList !== results && monsterList[0].type === "Monstrosity" ? (
+            <h2 id="search-result">All Monstrosities</h2>
+          ) : null}
+          {monsterList ? (
             <section className="list-results">
               {monsterList
-                .filter((monster) => challengeRating.includes(monster.challenge_rating))
-                .map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}
+                .filter((monster) =>
+                  challengeRating.includes(monster.challenge_rating)
+                )
+                .map((monster) => (
+                  <ListItemRound
+                    key={monster.slug}
+                    itemName={monster.name}
+                    setState={setMonsterIndex}
+                    itemInfo={monster.slug}
+                  />
+                ))}
             </section>
-          : null}
+          ) : null}
         </section>
-
-        
       </main>
     </>
   );
