@@ -20,9 +20,24 @@
   text-decoration: none;
 }
 
+.rule-button section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
 @media (min-width: 600px) and (max-width: 1024px) {
   .bloc-adventuring {
     width: 25vw;
+    padding: 10px;
+  }
+
+  .bloc-adventuring2 {
+    width: 65vw;
   }
 }
 
@@ -34,31 +49,18 @@
 
 .bloc-adventuring2 {
   font-family: var(--title-font);
-  font-size: 30px;
-  width: 50vw;
+  font-size: 16px;
+  width: 100vw;
   height: auto;
   padding: 1rem;
   line-height: 4rem;
-}
-
-@media (min-width: 600px) and (max-width: 1024px) {
-  .bloc-adventuring2 {
-    width: 65vw;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .bloc-adventuring2 {
-    font-size: 16px;
-    width: 100vw;
-  }
 }
 
 .bloc-adventuring > ul {
   margin-left: 1rem;
 }
 
-section > ul > button {
+.bloc-adventuring2 ul > button {
   border: 1px solid var(--warm-prime);
   width: 100%;
   padding: 10px;
@@ -67,10 +69,8 @@ section > ul > button {
   text-indent: 1rem;
   font-family: var(--title-font);
   font-size: 30px;
-  width: 50vw;
   height: auto;
   padding: 1rem;
-  line-height: 4rem;
 }
 
 .plus {
@@ -83,15 +83,9 @@ section > ul > button {
   font-family: var(--title-font);
   color: var(--warm-prime);
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 24px;
   margin-top: 1rem;
   margin-bottom: 0, 5rem;
-}
-
-@media screen and (max-width: 600px) {
-  .title-adventuring-h2 {
-    font-size: 24px;
-  }
 }
 
 .title-adventuring-h3 {
@@ -102,14 +96,16 @@ section > ul > button {
   text-decoration: none;
 }
 
+.rule-button h3 {
+  font-size: 20px;
+  text-align: left;
+  color: black;
+}
+
 .detailRule {
   font-size: 16px;
   line-height: 2rem;
   padding: 1rem;
   border-bottom: 1px solid var(--warm-prime);
   border-top: 1px solid var(--warm-prime);
-}
-
-.link {
-  text-decoration: none;
 }

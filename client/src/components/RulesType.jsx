@@ -38,13 +38,15 @@ function RulesType({ name, url, id }) {
              <ul key={element.url}>
 
                 
-                <button type="button" onClick={()=> (handleClick(element.url))}  >
+                <button className="rule-button"type="button" onClick={()=> (handleClick(element.url))}  >
                  
-                {element.name}
+                <section><h3>{element.name}</h3>
                 <p className="plus">+</p>
+                </section>
                 {isOpen && detailRule && detailRule.name === element.name && <div><p className="detailRule">{detailRule.desc}</p></div>}  
                 
                 </button>
+
 
                 </ul>
         
