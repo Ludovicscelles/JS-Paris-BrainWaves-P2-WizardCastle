@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
@@ -20,6 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/rules",
         element: <Rules />,
+        loader: () => fetch("https://www.dnd5eapi.co/api/rules"),
       },
       {
         path: "/classes",
@@ -29,6 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/bestiary",
         element: <Bestiary />,
+        loader: () => fetch("https://api.open5e.com/v1/monsters/?document__slug=wotc-srd&limit=500"),
       },
     ],
   },

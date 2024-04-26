@@ -1,37 +1,10 @@
-body {
-  background-color: #fcf2f2;
-}
-
-main {
+.main-classes {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main h2 {
-  font-family: var(--title-font);
-  font-size: 2.5em;
-  text-align: center;
-  color: var(--warm-prime);
-  margin: 20px;
-  padding: 23px;
-}
-
-main p {
-  font-family: var(--title-font);
-  text-align: center;
-  align-self: center;
-  width: 59ch;
-  padding: 10px;
-  font-size: 20px;
-}
-
-div p {
-  align-items: center;
-  text-align: center;
-}
-
-section {
+.class-list {
   display: flex;
   width: 65vw;
   height: 700px;
@@ -39,10 +12,10 @@ section {
   gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
+  padding: 30px;
 }
 
-article {
+.classes-box {
   display: flex;
   width: 240px;
   height: 191px;
@@ -50,15 +23,22 @@ article {
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-}
-
-article p {
-  font-size: 16px;
-  font-family: var(--body-font);
-  width: 20ch;
-}
-
-article h3 {
   font-size: 32px;
   font-family: var(--title-font);
+}
+
+.classes-box p {
+  font-size: 16px;
+  font-family: var(--title-font);
+  width: 20ch;
+  text-align: center;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .main-classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

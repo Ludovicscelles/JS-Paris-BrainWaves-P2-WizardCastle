@@ -1,19 +1,20 @@
 import PropTypes from "prop-types";
 
-function ClassesBox({job}) {
+function ClassesBox({itemName,setState,itemInfo }) {
     
     return (
-        <article>
-            <h3>{job.name}</h3>
-            <p>A fierce warrior of primitive background who can enter a battle rage</p>
+        <article className="classes-box">
+            <h3>{itemName}</h3>
+            <button type="button" onClick={() => setState(itemInfo)}>Choose this</button>
         </article>
     );
 } 
 
-ClassesBox.propTypes = { 
-    job:PropTypes.shape({
-        name:PropTypes.string.isRequired
-    }).isRequired
+ClassesBox.propTypes = {
+    itemName: PropTypes.string.isRequired,
+    setState: PropTypes.func.isRequired,
+    itemInfo: PropTypes.objectOf(PropTypes.string).isRequired,
 }
+
 
 export default ClassesBox;

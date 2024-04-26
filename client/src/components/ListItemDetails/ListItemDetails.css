@@ -1,0 +1,25 @@
+#list-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--warm-second);
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  max-width: 60vh;
+  text-align: center;
+}
+
+.list-item-details h3 {
+  font-size: 1.5em;
+  font-family: var(--title-font);
+  color: var(--warm-second);
+  margin: 0 0 0.5em 0;
+}
+
+.list-item-details p {
+  max-width: 60ch;
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
