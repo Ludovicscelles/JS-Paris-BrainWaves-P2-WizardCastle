@@ -1,5 +1,6 @@
-/* eslint-disable import/no-unresolved */
+
 import "./SearchBar.css";
+/* eslint-disable import/no-unresolved */
 import { BsSearch } from "react-icons/bs";
 
 function SearchBar() {
