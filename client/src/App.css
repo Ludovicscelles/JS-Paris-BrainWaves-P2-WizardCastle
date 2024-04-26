@@ -18,12 +18,7 @@
   --base-font-size: 1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: var(--title-font);
   color: var(--main-text);
   font-size: 2.5em;
@@ -49,12 +44,8 @@ header {
   width: 100%;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  min-width: 350px;
+.main-bestiary,
+.main-rules {
   margin: 0 12.5vw;
 }
 
@@ -80,7 +71,7 @@ body {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 768px) {
-  main {
+  .main-bestiary {
     display: flex;
     flex-direction: column;
     justify-items: center;
