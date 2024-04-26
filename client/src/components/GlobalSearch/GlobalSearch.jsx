@@ -6,11 +6,6 @@ import { BsSearch } from "react-icons/bs";
 import GlobalSearchResults from "../GlobalSearchResults/GlobalSearchResults";
 import { useScroll } from "../../context/noScroll";
 
-
-
-
-
-
 const customStyles = {
     content: {
       backgroundColor: '#283d3bea',
@@ -53,8 +48,6 @@ function GlobalSearch() {
       event.preventDefault()
       setIsSearchResult(true)
     }
-
-    
 
     return(
             <>

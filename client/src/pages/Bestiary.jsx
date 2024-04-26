@@ -63,7 +63,6 @@ function Bestiary() {
               {monsterTypes.map((type) => (<FilterButton key={type.index} filterType={type} list={results} handleList={setMonsterList} handleDetails={setMonsterIndex}/>))}
             </section>
           </section>        
-          {/* Je trie mes monstres en fonction de leur type */}
           <section className="list-results">
             {monsterIndex ? <ListItemDetails item={monsterInfo}/>: null}
           </section>           
