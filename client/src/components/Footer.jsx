@@ -6,26 +6,22 @@ function Footer() {
     {
       name: "Adam Maaloul",
       linktogithub: "https://github.com/vvdam",
-      linktox: "https://twitter.com/vdam_mp4",
       linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
     },
     {
       name: "Antoine Delalande",
-      linktogithub: "https://github.com/vvdam",
-      linktox: "https://twitter.com/vdam_mp4",
-      linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
+      linktogithub: "https://github.com/Hamsolovski",
+      linktolinkedin: "https://www.linkedin.com/in/antoine-delalande-678777b3/",
     },
     {
       name: "Charlie Le",
-      linktogithub: "https://github.com/vvdam",
-      linktox: "https://twitter.com/vdam_mp4",
-      linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
+      linktogithub: "https://github.com/JyAjAn",
+      linktolinkedin: "https://www.linkedin.com/in/charlie-le-7806672bb/",
     },
     {
       name: "Ludovic Scelles",
-      linktogithub: "https://github.com/vvdam",
-      linktox: "https://twitter.com/vdam_mp4",
-      linktolinkedin: "https://www.linkedin.com/in/adam-maaloul-17564026a/s",
+      linktogithub: "https://github.com/Ludovicscelles",
+      linktolinkedin: "https://www.linkedin.com/in/ludovic-scelles-56b05913b/",
     },
   ];
   return (

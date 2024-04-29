@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ClassesBox from "../components/ClassesBox";
 import "./Classes.css";
 import ListItemDetails from "../components/ListItemDetails/ListItemDetails";
-import SectionHeader from "../components/SectionHeader/SectionHeader";
+import SectionHeaderClasses from "../components/SectionHeader/SectionHeaderClasses";
 
 function Classes() {
   const result = useLoaderData();
@@ -42,7 +42,7 @@ function Classes() {
 
   return (
     <>
-      <SectionHeader />
+      <SectionHeaderClasses />
       <main className="main-classes">
         <h2>WHAT IS A CLASS ?</h2>
         <div>
