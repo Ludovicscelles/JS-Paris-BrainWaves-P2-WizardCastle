@@ -118,7 +118,7 @@ function Bestiary() {
             </section>
           </section>
           {/* Je trie mes monstres en fonction de leur type */}
-          <section className="filter-list">
+          <section className="list-results">
             {monsterIndex ? <ListItemDetails item={monsterInfo} /> : null}
           </section>
         </section>

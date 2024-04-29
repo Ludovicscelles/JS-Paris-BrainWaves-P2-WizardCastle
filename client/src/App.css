@@ -48,7 +48,20 @@ header {
 .main-rules {
   margin: 0 12.5vw;
 }
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: var(--title-font);
+  background-color: var(--warm-prime);
+  color: var(--main-text);
+}
 
+button:hover {
+  border: 1px solid var(--warm-prime);
+  background-color: var(--main-bg-color);
+  color: var(--warm-prime);
+}
 body {
   background-color: var(--main-bg-color);
 }

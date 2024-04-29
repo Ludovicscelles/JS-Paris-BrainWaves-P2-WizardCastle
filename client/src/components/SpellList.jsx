@@ -46,18 +46,23 @@ function SpellList() {
 
   return (
     <div className="App">
-      {currentSpell ? <ListItemDetails item={spellInfo} /> : null}
+      <section className="list-results">
+        {currentSpell ? <ListItemDetails item={spellInfo} /> : null}
+      </section>
+
       {lvls.map((levelSpells, index) => (
         <div key={levelSpells.index}>
           {index === 0 ? <h2>Cantrips</h2> : <h2>Level {index}</h2>}
-          {levelSpells.map((spell) => (
-            <ListItemRound
-              key={spell.index}
-              itemName={spell.name}
-              setState={setCurrentSpell}
-              itemInfo={spell.index}
-            />
-          ))}
+          <section className="list-results">
+            {levelSpells.map((spell) => (
+              <ListItemRound
+                key={spell.index}
+                itemName={spell.name}
+                setState={setCurrentSpell}
+                itemInfo={spell.index}
+              />
+            ))}
+          </section>
         </div>
       ))}
     </div>

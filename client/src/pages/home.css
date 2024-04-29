@@ -71,7 +71,6 @@
 }
 
 .listOption {
-  height: 400px;
 }
 
 .MeadleHome {
@@ -153,8 +152,8 @@
   .navItemBestiary,
   .navItemRules,
   .navItemClass {
-    height: 200px;
-    width: 136px;
+    height: 150px;
+    width: 100px;
   }
   #container2 ul {
     margin-left: 4.5%;
@@ -185,13 +184,16 @@
   #container1 p {
     max-width: 30ch;
   }
+  .listOption {
+    justify-content: center;
+    row-gap: 10px;
+  }
 }
 
 .listOption {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: 20px;
   column-gap: 10px;
 }
 
