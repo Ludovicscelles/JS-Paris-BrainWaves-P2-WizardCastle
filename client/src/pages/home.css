@@ -1,3 +1,10 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 #container1 {
   display: flex;
   flex-direction: column;
@@ -60,7 +67,6 @@
 }
 
 .imageCenter {
-  margin-left: -170px;
   filter: drop-shadow(rgb(0, 52, 115) 1px 0 10px);
 }
 
@@ -73,6 +79,7 @@
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -131,6 +138,8 @@
   .imageCenter {
     float: right;
     width: auto;
+    height: 200px;
+    margin: auto;
   }
 
   li {
@@ -139,10 +148,6 @@
   .icon {
     width: 150px !important;
     height: 200px !important;
-  }
-
-  .imageCenter {
-    height: 200px;
   }
 
   .navItemBestiary,
@@ -192,5 +197,4 @@
 
 .mainHome {
   background-color: var(--dark-prime);
-  /* gap: 4rem; */
 }

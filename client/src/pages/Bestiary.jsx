@@ -72,7 +72,7 @@ function Bestiary() {
   return (
     <>
       <SectionHeader />
-      <main>
+      <main className="main-bestiary">
         <h2>Monsters in D&D</h2>
         <p className="intro-text">
           In the vast realm of Dungeons & Dragons, where heroes rise and fall in

@@ -8,7 +8,6 @@ import Rules from "./pages/Rules";
 import Classes from "./pages/Classes";
 import Bestiary from "./pages/Bestiary";
 import Spells from "./pages/Spells";
-import Test from "./components/SpellList";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/rules",
         element: <Rules />,
+        loader: () => fetch("https://www.dnd5eapi.co/api/rules"),
       },
       {
         path: "/classes",
@@ -38,10 +38,6 @@ const router = createBrowserRouter([
         path: "/spells",
         element: <Spells />,
         loader: () => fetch("https://www.dnd5eapi.co/api/spells"),
-      },
-      {
-        path: "/test",
-        element: <Test />,
       },
     ],
   },

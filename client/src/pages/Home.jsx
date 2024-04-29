@@ -15,6 +15,7 @@ function Home() {
         </div>
       </header>
       <main className="mainHome">
+        <section className="home-section">
         <div id="container1">
           <img src="" alt="" />
           <h1>Welcome to Wizard’s Castle, dear adventurer</h1>
@@ -28,12 +29,14 @@ function Home() {
             </Link>
           </div>
         </div>
-
+        </section>
+        
         <header className="MeadleHome">
           <div className="imageCenter">
             <h1> </h1>
           </div>
         </header>
+        <section className="home-section">
         <div id="container2">
           <h1>Have a peek at our precious resources</h1>
           <p className="intro-text">
@@ -63,6 +66,7 @@ function Home() {
             </li>
           </ul>
         </div>
+        </section>
       </main>
     </>
   );
