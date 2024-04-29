@@ -22,7 +22,6 @@ function Bestiary() {
   const [monsterList, setMonsterList] = useState(results)
 
   // fonctions
-
     useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
     .then((res) => res.json())
@@ -30,9 +29,11 @@ function Bestiary() {
     .catch((err) => console.error(err))
   }, [monsterIndex])
 
-  // appel du composant
+   // tests
 
-  // tests
+
+
+  // appel du composant
 
   return (
     <>
@@ -51,8 +52,8 @@ function Bestiary() {
             See all monsters
         </button>
         <section className="filter-options">
-          <section className="filter-list">
-          <h2>Choose a challenge rating</h2>
+          <section className="list-results">
+          <h2>Choose a challenge rating </h2>
             <FilterList setChallengeRating={setChallengeRating} challengeRating={challengeRating}/>
           </section>
           <section>
@@ -62,8 +63,7 @@ function Bestiary() {
               {monsterTypes.map((type) => (<FilterButton key={type.index} filterType={type} list={results} handleList={setMonsterList} handleDetails={setMonsterIndex}/>))}
             </section>
           </section>        
-          {/* Je trie mes monstres en fonction de leur type */}
-          <section className="filter-list">
+          <section className="list-results">
             {monsterIndex ? <ListItemDetails item={monsterInfo}/>: null}
           </section>           
         </section>

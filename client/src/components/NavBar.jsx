@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import GlobalSearch from "./GlobalSearch/GlobalSearch";
 
 function NavBar() {
   return (
@@ -26,6 +27,7 @@ function NavBar() {
           </div>
         </li>
       </ul>
+      <GlobalSearch />
     </nav>
   );
 }
