@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+import Markdown from 'markdown-to-jsx';
 
 function RulesType({ name, url, id }) {
     const [subsection, setSubsection] = useState([]);
@@ -30,14 +31,13 @@ function RulesType({ name, url, id }) {
                             <h3>{element.name}</h3>
                             <p className="plus">+</p>
                         </section>
-                        {isOpen && detailRule && detailRule.name === element.name && <div><p className="detailRule">{detailRule.desc}</p></div>}  
+                        {isOpen && detailRule && detailRule.name === element.name && <div><p className="detailRule"><Markdown>{detailRule.desc}</Markdown></p></div>}  
                     </button>
                 </ul>          
             )}            
         </>
     );
-}
-    
+} 
 RulesType.propTypes = 
 {
     name: PropTypes.string.isRequired,

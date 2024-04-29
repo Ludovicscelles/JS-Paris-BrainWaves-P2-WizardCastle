@@ -19,14 +19,13 @@ function SearchBar({searchInput, setSearchInput}) {
         <BsSearch className="search-icon"   />
       </form>
     </section>
-
   );
 }
 
 SearchBar.propTypes = 
 {
-    searchInput: PropTypes.arrayOf(PropTypes.string).isRequired.isRequired,
-    setSearchInput: PropTypes.string.isRequired,
+    searchInput: PropTypes.string.isRequired,
+    setSearchInput: PropTypes.func.isRequired,
  }
 
 export default SearchBar;
