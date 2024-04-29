@@ -1,0 +1,50 @@
+.Spell-detail h4 {
+  font-size: 1.5em;
+  color: var(--warm-prime);
+  margin: 10px 0;
+}
+
+.item-desc {
+  font-family: var(--title-font);
+  color: var(--warm-prime);
+  text-align: center;
+  padding: 20px;
+}
+
+.diverse-trivia > p {
+  text-align: left;
+}
+
+.monster-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .stats-block p {
+    text-align: left;
+    font-size: 0.85em;
+  }
+}
+
+.class-require {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

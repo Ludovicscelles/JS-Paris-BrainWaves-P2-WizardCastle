@@ -26,6 +26,11 @@ function NavBar() {
             <Link to="/bestiary">Bestiary</Link>
           </div>
         </li>
+        <li>
+          <div className="navItem">
+            <Link to="/spells">Spells</Link>
+          </div>
+        </li>
       </ul>
       <GlobalSearch />
     </nav>

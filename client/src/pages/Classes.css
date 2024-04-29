@@ -7,12 +7,16 @@
 .class-list {
   display: flex;
   width: 65vw;
-  height: 700px;
   margin: 1px;
   gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
+}
+.class-results {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .classes-box {
