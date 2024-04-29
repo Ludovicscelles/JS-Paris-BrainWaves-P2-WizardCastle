@@ -35,3 +35,17 @@
   color: var(--dark-prime);
   width: 100;
 }
+
+@media only screen and (max-width: 768px) {
+  .search-icon {
+    width: 50px;
+  }
+  .global-search-container {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .global-search-container > input {
+    font-size: 0.7em;
+  }
+}

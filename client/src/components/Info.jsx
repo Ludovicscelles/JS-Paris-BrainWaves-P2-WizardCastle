@@ -13,10 +13,6 @@ function Info({ worker }) {
         <a href={worker.linktolinkedin}>
           <p>linkedin</p>
         </a>
-        <br />
-        <a href={worker.linktox}>
-          <p>Twitter</p>
-        </a>
       </div>
     </div>
   );
