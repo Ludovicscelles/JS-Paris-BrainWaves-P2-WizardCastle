@@ -18,8 +18,6 @@ function Spells() {
           sorcery.
         </p>
 
-        <h2>Filter by monster type</h2>
-
         <SpellList />
       </main>
     </>
