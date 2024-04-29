@@ -25,6 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/classes",
         element: <Classes />,
+        loader: (() => fetch('https://www.dnd5eapi.co/api/classes'))
       },
       {
         path: "/bestiary",

@@ -43,6 +43,6 @@ RulesType.propTypes =
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
- }
+}
 
 export default RulesType;
