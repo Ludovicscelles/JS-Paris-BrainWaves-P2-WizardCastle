@@ -7,15 +7,10 @@ function Spells() {
   return (
     <>
       <SectionHeaderSpells />
-      <main>
-        <h2>spells in D&D</h2>
+      <main className="main-bestiary">
+        <h2>Spells in D&D</h2>
         <p className="intro-text">
-          In the vast realm of Dungeons & Dragons, where heroes rise and fall in
-          epic quests, there exists a myriad of creatures both wondrous and
-          terrifying. These beings, known collectively as monsters, inhabit the
-          deepest dungeons, the darkest forests, and the highest peaks. Some are
-          born of ancient magic, while others are the twisted creations of dark
-          sorcery.
+        Within the boundless tapestry of magic that weaves through the realms of Dungeons & Dragons, spells are the threads that shape reality itself. Wielded by wizards, sorcerers, clerics, and druids, these mystical incantations harness the forces of nature, the elements, and the arcane to achieve wondrous feats and unleash devastating power.
         </p>
 
         <SpellList />

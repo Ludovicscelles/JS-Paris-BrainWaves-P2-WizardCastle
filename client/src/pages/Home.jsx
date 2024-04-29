@@ -64,6 +64,13 @@ function Home() {
                 </div>
               </Link>
             </li>
+            <li>
+              <Link to="/spells">
+                <div className="navItemSpells">
+                  <h1>Spells</h1>
+                </div>
+              </Link>
+            </li>
           </ul>
         </div>
         </section>

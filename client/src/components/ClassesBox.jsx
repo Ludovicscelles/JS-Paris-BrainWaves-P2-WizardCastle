@@ -5,7 +5,7 @@ function ClassesBox({itemName,setState,itemInfo }) {
     return (
         <article className="classes-box">
             <h3>{itemName}</h3>
-            <button type="button" onClick={() => setState(itemInfo)}>Choose this</button>
+            <button type="button" onClick={() => setState(itemInfo)}><a href="#list-item-details">Choose this</a></button>
         </article>
     );
 } 

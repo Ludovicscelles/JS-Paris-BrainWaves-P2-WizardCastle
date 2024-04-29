@@ -12,6 +12,11 @@
   text-decoration: none;
 }
 
+.ListItemRound a:hover {
+  color: var(--warm-second);
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 768px) {
   .ListItemRound {
     font-size: 0.7em;

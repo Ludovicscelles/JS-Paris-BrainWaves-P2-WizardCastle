@@ -70,9 +70,6 @@
   filter: drop-shadow(rgb(0, 52, 115) 1px 0 10px);
 }
 
-.listOption {
-}
-
 .MeadleHome {
   background-image: url("/src/assets/images/BattleField.jpg");
   background-size: cover;
@@ -84,7 +81,8 @@
 }
 .navItemBestiary,
 .navItemRules,
-.navItemClass {
+.navItemClass,
+.navItemSpells {
   height: 350px;
   width: 250px;
   display: flex;
@@ -100,20 +98,23 @@
 .navItemRules {
   background-image: url("https://larpempire.files.wordpress.com/2020/10/10b182866cb6717e1b90eae1543c5bec.jpg");
   background-size: cover;
-  height: 350px;
-  width: 250px;
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  background-position: 60%, 60%;
 }
 .navItemClass {
   background-image: url("/src/assets/images/Classes.png");
   background-size: cover;
 }
+
+.navItemSpells {
+  background-image: url("https://www.gamersdecide.com/sites/default/files/strongspell.jpg");
+  background-size: cover;
+  background-position: 50%, 50%;
+}
+
 .navItemBestiary:hover,
 .navItemRules:hover,
-.navItemClass:hover {
+.navItemClass:hover,
+.navItemSpells:hover {
   filter: grayscale(80%);
   transform: scale(1.1);
   filter: drop-shadow(rgb(33, 6, 6) 1px 0 10px) !important;
@@ -121,7 +122,8 @@
 
 .navItemBestiary h1,
 .navItemRules h1,
-.navItemClass h1 {
+.navItemClass h1,
+.navItemSpells h1 {
   justify-self: flex-end !important;
   color: white !important;
 }
@@ -151,7 +153,8 @@
 
   .navItemBestiary,
   .navItemRules,
-  .navItemClass {
+  .navItemClass,
+  .navItemSpells {
     height: 150px;
     width: 100px;
   }
@@ -160,19 +163,19 @@
   }
   .navItemBestiary h1,
   .navItemRules h1,
-  .navItemClass h1 {
+  .navItemClass h1,
+  .navItemSpells h1 {
     font-size: 20px;
-  }
-  .navItemRules {
-    background-position: 60%, 60%;
   }
 
   .navItemClass {
     background-position: 10%, 80%;
   }
+
   .navItemBestiary:hover,
   .navItemRules:hover,
-  .navItemClass:hover {
+  .navItemClass:hover,
+  .navItemSpells:hover {
     filter: grayscale(80%);
     transform: scale(1.01);
   }
