@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import "./SearchBar.css";
 import { BsSearch } from "react-icons/bs";
 
