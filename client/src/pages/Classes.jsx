@@ -43,7 +43,7 @@ function Classes() {
   return (
     <>
       <SectionHeaderClasses />
-      <main className="main-classes">
+      <main className="main-bestiary">
         <h2>WHAT IS A CLASS ?</h2>
         <div>
           <p className="intro-text">

@@ -11,12 +11,6 @@
   gap: 5px;
 }
 
-.global-search-container:hover {
-  background-color: var(--dark-prime);
-  border: 1px solid rgb(156, 156, 156);
-  color: white;
-}
-
 .global-search {
   color: white;
   background-color: rgba(0, 0, 0, 0.342);
