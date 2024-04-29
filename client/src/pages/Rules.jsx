@@ -2,12 +2,15 @@
 import "./Rules.css";
 import { useLoaderData } from "react-router-dom";
 import RulesType from "../components/RulesType";
+import SectionHeader from "../components/SectionHeader/SectionHeader";
 
 
 function Rules() {
     const rules = useLoaderData();
     
     return(
+        <>
+        <SectionHeader/>
         <main className="main-rules">
             <aside className="bloc-adventuring">
                 {rules.results.map((rule, index) => 
@@ -20,7 +23,8 @@ function Rules() {
                 )}
             </section>
         </main>
-    )
+        </>
+         )
 }
 
 export default Rules; 

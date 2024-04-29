@@ -55,8 +55,10 @@ function Bestiary() {
   const [monsterInfo, setMonsterInfo] = useState([]);
   const [monsterIndex, setMonsterIndex] = useState(null);
   const [monsterList, setMonsterList] = useState(results);
-
-  // fonctions
+  const [searchInput, setSearchInput] = useState("");
+  const filterMonsterName = monsterList.filter((item) =>
+    item.name.toLowerCase().startsWith(searchInput)
+  );
 
   useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
@@ -65,13 +67,13 @@ function Bestiary() {
       .catch((err) => console.error(err));
   }, [monsterIndex]);
 
-  // appel du composant
-
-  // tests
-
   return (
     <>
-      <SectionHeader />
+      <SectionHeader
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+      />
+
       <main className="main-bestiary">
         <h2>Monsters in D&D</h2>
         <p className="intro-text">
@@ -93,8 +95,8 @@ function Bestiary() {
           See all monsters
         </button>
         <section className="filter-options">
-          <section className="filter-list">
-            <h2>Choose a challenge rating</h2>
+          <section className="list-results">
+            <h2>Choose a challenge rating </h2>
             <FilterList
               setChallengeRating={setChallengeRating}
               challengeRating={challengeRating}
@@ -123,6 +125,7 @@ function Bestiary() {
 
         <section className="filter-results">
           {/* J'appelle la liste de mes résultats */}
+
           {monsterList === results ? (
             <h2 id="search-result">All Monsters </h2>
           ) : null}
@@ -134,16 +137,16 @@ function Bestiary() {
           ) : null}
           {monsterList ? (
             <section className="list-results">
-              {monsterList
-                .filter((monster) =>
-                  challengeRating.includes(monster.challenge_rating)
+              {filterMonsterName
+                .filter((item) =>
+                  challengeRating.includes(item.challenge_rating)
                 )
-                .map((monster) => (
+                .map((item) => (
                   <ListItemRound
-                    key={monster.slug}
-                    itemName={monster.name}
+                    key={item.slug}
+                    itemName={item.name}
                     setState={setMonsterIndex}
-                    itemInfo={monster.slug}
+                    itemInfo={item.slug}
                   />
                 ))}
             </section>

@@ -108,4 +108,5 @@
   padding: 1rem;
   border-bottom: 1px solid var(--warm-prime);
   border-top: 1px solid var(--warm-prime);
+  text-align: justify;
 }

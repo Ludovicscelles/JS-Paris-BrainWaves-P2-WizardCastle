@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ScrollProvider } from "./context/noScroll";
 
 import App from "./App";
 import Home from "./pages/Home";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/classes",
         element: <Classes />,
+        loader: (() => fetch('https://www.dnd5eapi.co/api/classes'))
       },
       {
         path: "/bestiary",
@@ -47,6 +49,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ScrollProvider>
+      <RouterProvider router={router} />
+    </ScrollProvider>
   </React.StrictMode>
 );

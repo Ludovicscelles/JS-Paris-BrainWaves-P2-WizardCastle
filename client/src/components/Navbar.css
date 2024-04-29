@@ -1,17 +1,21 @@
 nav {
   display: flex;
   flex-direction: row;
-  background-color: black;
-  opacity: 0.5;
-  height: 50px;
-  position: sticky;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
   align-items: center;
+  gap: 50px;
+  z-index: 20;
 }
 nav ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  opacity: 1;
   margin-left: 20px;
   align-items: center;
   height: 50px;
@@ -24,8 +28,10 @@ nav li {
 nav li a {
   color: white;
   text-decoration: none;
-  opacity: 1;
+  font-family: var(--title-font);
+  font-size: 1.5em;
 }
+
 .navItem {
   align-items: center;
 }

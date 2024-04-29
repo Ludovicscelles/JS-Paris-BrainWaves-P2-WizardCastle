@@ -1,0 +1,19 @@
+.global-search-result-category {
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+.search-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.global-search-no-result {
+  color: white;
+  font-family: var(--title-font);
+  text-align: center;
+  margin: 2em 0 0 0;
+}
