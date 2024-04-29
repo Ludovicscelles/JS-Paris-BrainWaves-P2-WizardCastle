@@ -10,6 +10,8 @@ import FilterList from "../components/FilterList/FilterList";
 import "./Bestiary.css";
 
 
+
+
 function Bestiary() {
   // states
   const { results } = useLoaderData()
@@ -20,8 +22,11 @@ function Bestiary() {
   const [monsterInfo, setMonsterInfo] = useState([])
   const [monsterIndex, setMonsterIndex] = useState(null)
   const [monsterList, setMonsterList] = useState(results)
+  const [searchInput, setSearchInput] = useState("");
+  const filterMonsterName = monsterList.filter((item) =>
+  item.name.toLowerCase().startsWith(searchInput));
 
-  // fonctions
+  
     useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/${monsterIndex}`)
     .then((res) => res.json())
@@ -29,15 +34,11 @@ function Bestiary() {
     .catch((err) => console.error(err))
   }, [monsterIndex])
 
-   // tests
-
-
-
-  // appel du composant
 
   return (
     <>
-      <SectionHeader />
+      <SectionHeader searchInput={searchInput} setSearchInput={setSearchInput} />
+       
       <main className="main-bestiary">
         <h2>Monsters in D&D</h2>
         <p className="intro-text">In the vast realm of Dungeons & Dragons, where heroes rise and fall in epic quests, there exists a myriad of creatures both wondrous and  terrifying. These beings, known collectively as monsters, inhabit the deepest dungeons, the darkest forests, and the highest peaks. Some are  born of ancient magic, while others are the twisted creations of dark sorcery.</p>
@@ -70,14 +71,14 @@ function Bestiary() {
 
         <section className="filter-results">
           {/* J'appelle la liste de mes résultats */}
+
           {(monsterList === results )? <h2 id="search-result">All Monsters </h2> : null}
           {(monsterList !== results && monsterList[0].type !== "Monstrosity" )? <h2 id="search-result">All {monsterList[0].type}s </h2> : null}
           {(monsterList !== results && monsterList[0].type === "Monstrosity" )? <h2 id="search-result">All Monstrosities</h2> : null}
           {monsterList ?
             <section className="list-results">
-              {monsterList
-                .filter((monster) => challengeRating.includes(monster.challenge_rating))
-                .map((monster) => (<ListItemRound key={monster.slug} itemName={monster.name} setState={setMonsterIndex} itemInfo={monster.slug}/>))}
+            
+                {filterMonsterName.filter((item) => challengeRating.includes(item.challenge_rating)).map((item)=>(<ListItemRound key={item.slug} itemName={item.name} setState={setMonsterIndex} itemInfo={item.slug}/>))}
             </section>
           : null}
         </section>
