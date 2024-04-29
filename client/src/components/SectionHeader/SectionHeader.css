@@ -1,0 +1,56 @@
+.section-header {
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/034/985/735/medium/justin-gerard-dh1901-n42-v1x05-detail-a-72web.jpg?1613774847");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+}
+
+.section-header h1 {
+  padding: 5px;
+  backdrop-filter: blur(2px);
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.section-header-spell {
+  background-image: url("./src/assets/images/banniereSpells.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+}
+
+.section-header-rules {
+  background-image: url("https://larpempire.files.wordpress.com/2020/10/10b182866cb6717e1b90eae1543c5bec.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+}
+.section-header-classes {
+  background-image: url("https://miro.medium.com/v2/resize:fit:1400/0*RUSGLIjpQVY7kt4Y.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+}

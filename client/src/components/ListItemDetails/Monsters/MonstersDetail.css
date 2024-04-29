@@ -1,0 +1,66 @@
+.monster-detail {
+  background-color: white;
+  padding: 10px;
+}
+
+.monster-detail h4 {
+  font-size: 1.5em;
+  color: var(--warm-prime);
+  margin: 10px 0;
+}
+
+.item-desc {
+  font-family: var(--title-font);
+  color: var(--warm-prime);
+  text-align: center;
+  padding: 20px;
+}
+
+.monster_detail ul {
+  height: auto;
+  margin: 10px;
+}
+
+.stats-block > p {
+  text-align: left;
+}
+
+.monster-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.special-attacks {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.special-attacks > li {
+  text-align: left;
+  font-family: var(--body-font);
+  font-weight: 400;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .stats-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .stats-block p {
+    text-align: left;
+    font-size: 0.85em;
+  }
+}

@@ -1,0 +1,24 @@
+.ListItemRound {
+  margin: 2px 5px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-family: var(--title-font);
+  background-color: var(--warm-second);
+  color: var(--main-text);
+}
+
+.ListItemRound a {
+  color: var(--main-text);
+  text-decoration: none;
+}
+
+.ListItemRound a:hover {
+  color: var(--warm-second);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .ListItemRound {
+    font-size: 0.7em;
+  }
+}
